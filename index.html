@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+    <style>
+        .error { color: red; }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h2>Form Handling</h2>
+    <form action="form.php" method="post">
+        Name: <input type="text" name="name">
+        <span class="error"><?php echo isset($_GET['nameErr']) ? $_GET['nameErr'] : ''; ?></span>
+        <br><br>
+
+        Email: <input type="text" name="email">
+        <span class="error"><?php echo isset($_GET['emailErr']) ? $_GET['emailErr'] : ''; ?></span>
+        <br><br>
+
+        Password: <input type="password" name="password">
+        <br><br>
+
+        Confirm Password: <input type="password" name="confirm_password">
+        <span class="error"><?php echo isset($_GET['passwordErr']) ? $_GET['passwordErr'] : ''; ?></span>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
